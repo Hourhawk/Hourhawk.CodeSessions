@@ -1,0 +1,214 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: #EEEEEE;
+	background-image: url("https://images.pexels.com/photos/34578/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100vh;
+	transition-duration: 0.25s;
+}
+.wrapper {
+	z-index: 2;
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+}
+.loggedin {
+	text-align: center;
+}
+.cs-bg {
+	background-color: #393E46;
+}
+.nav-link, .dropdown-item {
+	color: #EEEEEE;
+}
+.active {
+	color: #4ECCA3 !important;
+}
+.nav-link:hover, .nav-link:focus, .dropdown-item:hover, .dropdown-item:focus {
+	transition-duration: 0.25s;
+	color: #4ECCA3;
+	background: inherit;
+}
+.navbar-brand, .navbar-brand:focus, .navbar-brand:hover {
+	color: #4ECCA3;
+}
+.navbar {
+	padding-left: 6em;
+	padding-right: 6em;
+}
+.navbar-toggler > i {
+	color: #FFFFFF;
+}
+.overlay {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(77, 83, 94, 0.7);
+}
+.landing {
+	text-align: center;
+	width: 50vw;
+}
+.signup, .login {
+	text-align: center;
+	width: 40vw;
+}
+.landing-title {
+	color: #4ECCA3;
+	font-size: 2.2em;
+}
+.landing-about {
+	color: #EEEEEE;
+	font-size: 1.5em;
+	margin-bottom: 1em;
+}
+.btn-cs {
+	background-color: rgba(0,0,0,0);
+	border: 1px solid #4ECCA3;
+	color: #4ECCA3;
+}
+.btn-cs:hover, .btn-cs:focus {
+	transition-duration: 0.5s;
+	background-color: #4ECCA3;
+	color: #EEEEEE;
+}
+.btn-cs-res {
+	background-color: rgba(0,0,0,0);
+	color: #EEEEEE;
+}
+.btn-cs-res:hover, .btn-cs-res:focus {
+	text-decoration: none;
+	color: #EEEEEE;
+}
+.center-content {
+	width: 100%;
+	height: 90%;
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+}
+.hide {
+	display: none;
+}
+.signup > a, .signup > input, .login > a, .login > input, .session-code {
+	margin-bottom: 1em;
+}
+.signup > input, .login > input, .session-code {
+	background-color: rgba(0,0,0,0);
+	border: 1px solid #4ECCA3;
+	color: #EEEEEE !important;
+}
+.signup > input:hover, .signup > input:focus, .login > input:focus, .login > input:hover, .session-code:hover, .session-code:focus {
+	background-color: rgba(0,0,0,0);
+}
+::placeholder {
+	color: #EEEEEE !important;
+}
+.signup > a, .login > a, #loggedin-session-join > a {
+	width: 100%;
+}
+#loggedin-landing > .btn-cs:hover, #loggedin-landing > .btn-cs:focus {
+	color: #EEEEEE;
+	border-color: #4ECCA3;
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus, .btn:focus {   
+  border-color: inherit;
+  box-shadow: none;
+  outline: 0 none;
+}
+.white {
+	color: #EEEEEE !important;
+}
+.lowkey {
+	color: rgba(238, 238, 238, 0.6);
+	font-size: 1.3em;
+}
+.lowkey:hover, .lowkey:focus {
+	color: rgba(238, 238, 238, 0.7);
+	transition-duration: 0.25s;
+	text-decoration: none;
+}
+#editor {
+    width: 50vw;
+    height: 70vh;
+    border-radius: 10px;
+}
+#loggedin-session-id {
+	color: #FFFFFF;
+	font-size: 1.4em;
+}
+.cs-drop {
+	color: #fff;
+}
+.cs-drop:hover, .cs-drop:focus {
+	color: #4ECCA3;
+	transition-duration: 0.25s;
+	text-decoration: none;
+}
+.session-btn {
+	color: #FFFFFF;
+}
+.session-btn:hover, .session-btn:focus {
+	color: #4ECCA3;
+	transition-duration: 0.25s;
+}
+#loggedin-session > .row > .col > .dropdown, #loggedin-session > .row > .col > .btn {
+	display: inline-block;
+}
+.session-join {
+	text-align: center;
+}
+.loggedin-session-list {
+	max-width: 100%;
+	padding: 1em;
+	border-radius: 10px;
+	margin-top: 0.5em;
+	color: #FFFFFF;
+}
+.dropdown {
+	display: inline-block !important;
+}
+@media (max-width: 731px) {
+	.rem-tab {
+		display: none;
+	}
+	.rem-tab-margin {
+		margin-bottom: 0.5em;
+	}
+}
+@media (max-width: 1401px) {
+	.landing, .signup, .login {
+		width: 96vw;
+	}
+	.landing-cta {
+		width: 70%;
+	}
+	#editor {
+	    width: 96vw;
+	    height: 80vh;
+	}
+	#session-new {
+		margin-bottom: 0.5em;
+	}
+	#loggedin-session {
+		margin-top: 2.5em;
+	}
+}

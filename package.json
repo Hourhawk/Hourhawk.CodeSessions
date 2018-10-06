@@ -1,0 +1,21 @@
+{
+  "name": "codesessions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hourhawk",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^3.0.1",
+    "email-validator": "^2.0.4",
+    "express": "^4.16.3",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.4",
+    "random-number": "0.0.9",
+    "shortid": "^2.2.13",
+    "socket.io": "^2.1.1"
+  }
+}

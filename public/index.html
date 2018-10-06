@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./utility/codesessions.css">
+    <title>Code Sessions</title>
+  </head>
+  <body>
+  	<div class="overlay"></div>
+  	<div class="wrapper">
+		<nav class="navbar navbar-expand-lg cs-bg">
+		  <a class="navbar-brand" href="#">Code Sessions</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <i class="fas fa-bars"></i>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#" id="nav-home">Home <span class="sr-only">(current)</span></a>
+		      </li>
+		    </ul>
+		    <ul class="navbar-nav ml-auto">
+			  <li class="nav-item dropdown">
+			      <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        Account
+			      </a>
+			      <div class="dropdown-menu cs-bg">
+			        <a class="dropdown-item" href="#login" id="account-login">Login</a>
+			        <a class="dropdown-item" href="#signup" id="account-signup">Signup</a>
+			        <a class="dropdown-item hide" href="#logout" id="account-logout">Logout</a>
+			      </div>
+			  </li>
+		    </ul>
+		  </div>
+		</nav>
+		<div class="center-content hide" id="loggedin">
+			<div class="loggedin" id="loggedin-landing">
+				<h1 class="landing-title">Code Sessions User Home</h1>
+				<p class="landing-about" id="logged-userinfo">You're currently logged in as: </p>
+				<a href="#newsession" id="session-new" class="btn btn-cs landing-cta">New Session</a>
+				<a href="#joinsession" id="session-join" class="btn btn-cs landing-cta">Join Session</a>
+			</div>
+			<div class="session-join hide" id="loggedin-session-join">
+				<h1 class="landing-title">Join a Code Session</h1>
+				<p class="landing-about">Please request the session code from your partner who has created a session.</p>
+				<input type="text" class="form-control session-code" placeholder="Session Code" id="session-code">
+				<a href="#joinsession" id="session-join-code" class="btn btn-cs">Join Session</a><br><br>
+				<a href="#landing" id="join-session-back" class="lowkey" style="font-size:1.2em;">Back to Landing</a>
+			</div>
+			<div class="hide" id="loggedin-session">
+				<div class="row">
+					<div class="col rem-tab-margin">
+					  <div class="dropdown">
+					  <a class="btn dropdown-toggle cs-bg cs-drop" href="#theme" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    Themes
+					  </a>
+					  <div class="dropdown-menu cs-bg">
+					    <a class="dropdown-item" href="#theme" id="theme-dracula">Dracula</a>
+					    <a class="dropdown-item" href="#theme" id="theme-github">Github</a>
+					  </div>
+					 </div>
+					  <div class="dropdown">
+					  <a class="btn dropdown-toggle cs-bg cs-drop" id="loggedin-session-dropdown-language" href="#language" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    Languages
+					  </a>
+					  <div class="dropdown-menu cs-bg">
+					    <a class="dropdown-item" href="#language" id="language-html">HTML</a>
+					    <a class="dropdown-item" href="#language" id="language-javascript">Javascript</a>
+					    <a class="dropdown-item" href="#language" id="language-css">CSS</a>
+					    <a class="dropdown-item" href="#language" id="language-php">PHP</a>
+					    <a class="dropdown-item" href="#language" id="language-xml">XML</a>
+					    <a class="dropdown-item" href="#language" id="language-json">JSON</a>
+					    <a class="dropdown-item" href="#language" id="language-mysql">MySQL</a>
+					    <a class="dropdown-item" href="#language" id="language-java">Java</a>
+					    <a class="dropdown-item" href="#language" id="language-c_cpp">C++</a>
+					    <a class="dropdown-item" href="#language" id="language-csharp">C#</a>
+					    <a class="dropdown-item" href="#language" id="language-rust">Rust</a>
+					    <a class="dropdown-item" href="#language" id="language-ruby">Ruby</a>
+					    <a class="dropdown-item" href="#language" id="language-lua">Lua</a>
+					    <a class="dropdown-item" href="#language" id="language-coffee">CoffeeScript</a>
+					    <a class="dropdown-item" href="#language" id="language-typescript">TypeScript</a>
+					  </div>
+					 </div>
+					 <button type="button" class="btn cs-bg session-btn" id="loggedin-session-download">Download Code</button>
+					 <button type="button" class="btn cs-bg session-btn" id="loggedin-session-exit">Exit Session</button>
+					</div>
+					<div class="rem-tab">
+						<div class="float-right">
+							<p id="loggedin-session-id">Session Code Here</p>
+						</div>
+					</div>
+				</div>
+				<div id="editor"></div>
+				<div class="loggedin-session-list cs-bg" id="loggedin-session-list"><strong>Connected Users: </strong></div>
+			</div>
+		</div>
+		<div class="center-content" id="notlogged">
+			<div class="landing" id="landing">
+				<h1 class="landing-title">Welcome to Code Sessions</h1>
+				<p class="landing-about">Peer Coding at your finger-tips. Get connected with others around the world and program together with astounding connectivity and premium features all for free.</p>
+				<a href="#signup" id="landing-signup" class="btn btn-cs landing-cta">Signup Now</a>
+			</div>
+			<div class="signup hide" id="signup">
+				<h1 class="landing-title white">Code Sessions Signup</h1>
+				<input type="text" id="signup-email" class="form-control cs-input" placeholder="Email Address">
+				<input type="password" id="signup-password" class="form-control cs-input" placeholder="Password">
+				<input type="password" id="signup-conpassword" class="form-control cs-input" placeholder="Confirm Password">
+				<a href="#signup" id="form-signup" class="btn btn-cs">Signup</a>
+				<a href="#landing" id="signup-back" class="lowkey">Back to Landing</a>
+			</div>
+			<div class="login hide" id="login">
+				<h1 class="landing-title white">Code Sessions Login</h1>
+				<input type="text" id="login-email" class="form-control cs-input" placeholder="Email Address">
+				<input type="password" id="login-password" class="form-control cs-input" placeholder="Password">
+				<a href="#login" id="form-login" class="btn btn-cs">Login</a>
+				<a href="#landing" id="login-back" class="lowkey">Back to Landing</a>
+			</div>
+		</div>
+	</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./ace/mode-javascript.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./utility/codesessions.js"></script>
+  </body>
+</html>
